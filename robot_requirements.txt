@@ -1,0 +1,23 @@
+RUN 1
+1. The navigation component must receive input indicating whether the path in front, to the left, and to the right are blocked.
+2. The navigation component must receive input indicating whether the robot's goal is ahead, to the left, or to the right.
+3. The navigation component must prioritize moving toward the goal whenever this can be done safely, without violating any blocked directions.
+4. The navigation component must never move into a blocked direction.
+5. If the navigation component cannot find a safe direction to move in, it must stop.
+6. The navigation component must be designed to operate in multiple simulated environments without modification.
+
+RUN 2
+1. The navigation component must receive input indicating whether the path in front, to the left, and to the right are blocked.
+2. The navigation component must receive input indicating whether the robot's goal is ahead, to the left, or to the right.
+3. The navigation component must prioritize moving toward the goal whenever this can be done safely, without violating any blocked directions.
+4. The navigation component must never move into a blocked direction.
+5. If the navigation component cannot find a safe direction to move in, it must stop.
+6. The navigation component must be designed to operate in multiple simulated environments without modification.
+
+RUN 3
+1. The navigation component must receive input indicating whether the path in front, to the left, and to the right are blocked.
+2. The navigation component must receive input indicating whether the robot's goal is ahead, to the left, or to the right.
+3. The navigation component must prioritize moving toward the goal whenever this can be done safely, without violating any blocked directions.
+4. The navigation component must never move into a blocked direction.
+5. If the navigation component cannot find a safe direction to move in, it must stop.
+6. The navigation component must be designed to operate in multiple simulated environments without modification.
