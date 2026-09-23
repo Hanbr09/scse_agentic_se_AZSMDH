@@ -70,7 +70,8 @@ confirms CPU inference and two inference threads.
 `verify_pipeline.py` checks that the plan equals a recorded JSON response,
 the code equals a recorded text response, and each user message contains
 exactly its preceding artifact. The verification report includes the file
-hashes and the outcomes of all 32 navigation scenarios. These consistency
+hashes and the outcomes of all 32 navigation scenarios. Text hashes normalize
+line endings to LF so Windows and other Git checkouts agree. These consistency
 checks make accidental manual changes visible; the model text was not
 rewritten after generation.
 

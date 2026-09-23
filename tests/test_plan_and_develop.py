@@ -222,7 +222,12 @@ class ArtifactTests(unittest.TestCase):
                                          {"role": "user", "content": json.dumps(supplied)}]},
                 "response": {"done": True, "done_reason": "stop", "message": {"content": response}},
             })
-        self.assertEqual(verify_pipeline.verify(self.folder)["scenario_count"], 32)
+        report = verify_pipeline.verify(self.folder)
+        self.assertEqual(report["scenario_count"], 32)
+        for name in ("artifacts/requirements.json", "artifacts/plan.json", "navigation_logic.py"):
+            path = self.folder / name
+            path.write_bytes(path.read_text(encoding="utf-8").replace("\n", "\r\n").encode("utf-8"))
+        self.assertEqual(verify_pipeline.verify(self.folder)["sha256_utf8_lf"], report["sha256_utf8_lf"])
 
     def test_verification_requires_matching_raw_model_evidence(self):
         artifact_io.write_json(self.folder / "artifacts" / "requirements.json", REQUIREMENTS)

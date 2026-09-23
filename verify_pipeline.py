@@ -51,7 +51,11 @@ def verify(base_dir=BASE_DIR):
         "status": "passed",
         "scenario_count": len(cases),
         "scope": "All 8 boolean obstacle combinations times 4 supported goal values; not a physical robot or route simulation.",
-        "sha256": {p.relative_to(base_dir).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
+        "hash_convention": "UTF-8 text with CRLF/CR normalized to LF; no other content changes.",
+        "sha256_utf8_lf": {
+            p.relative_to(base_dir).as_posix(): hashlib.sha256(p.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+            for p in paths
+        },
         "model_evidence": evidence,
         "cases": cases,
     }

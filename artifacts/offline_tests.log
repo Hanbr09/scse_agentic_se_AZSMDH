@@ -58,6 +58,6 @@ test_rejects_wrong_types_and_keys (test_plan_and_develop.PlanTests) ... ok
 test_valid_plan_is_returned_without_rewriting (test_plan_and_develop.PlanTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 58 tests in 0.820s
+Ran 58 tests in 0.855s
 
 OK
