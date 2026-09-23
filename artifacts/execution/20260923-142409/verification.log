@@ -1,0 +1,2 @@
+PASS: 32 navigation scenarios; artifacts also match their recorded model exchanges.
+Saved artifacts/navigation_verification.json. No model was called.

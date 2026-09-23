@@ -1,0 +1,9 @@
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.ps1 text eol=lf
+*.log text eol=lf -whitespace
+*.pdf binary
+.gitignore text eol=lf
+.gitattributes text eol=lf

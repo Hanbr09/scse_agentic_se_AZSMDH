@@ -2,6 +2,10 @@
 
 import json
 import os
+from datetime import datetime, timezone
+from pathlib import Path
+
+from artifact_io import write_json
 
 
 ALLOWED_ACTIONS = ("FORWARD", "LEFT", "RIGHT", "STOP")
@@ -34,7 +38,7 @@ explanations, or extra keys.
 """
 
 
-def ask_qwen(system_prompt, brief_text, json_output=False):
+def ask_qwen(system_prompt, brief_text, json_output=False, *, response_schema=None, trace_dir=None):
     # Lazy import keeps offline validation and tests independent of Ollama.
     try:
         import ollama
@@ -42,18 +46,31 @@ def ask_qwen(system_prompt, brief_text, json_output=False):
         raise RuntimeError("Install requirements.txt before making a model request.") from error
 
     client = ollama.Client(host="http://127.0.0.1:11434", timeout=120.0, trust_env=False)
+    request = {
+        "model": os.environ.get("OLLAMA_MODEL", "qwen2.5:3b"),
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": brief_text},
+        ],
+        "format": response_schema if response_schema is not None else ("json" if json_output else None),
+        "options": {"temperature": 0, "num_gpu": 0, "num_thread": 2, "num_ctx": 2048, "num_predict": 768},
+        "keep_alive": 0,
+        "stream": False,
+    }
+    started = datetime.now(timezone.utc)
     try:
-        response = client.chat(
-            model=os.environ.get("OLLAMA_MODEL", "qwen2.5:3b"),
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": brief_text},
-            ],
-            format="json" if json_output else None,
-            options={"temperature": 0, "num_gpu": 0, "num_thread": 2, "num_ctx": 2048},
-            keep_alive=0,
-            stream=False,
-        )
+        response = client.chat(**request)
+        if trace_dir is not None:
+            raw = response.model_dump(mode="json") if hasattr(response, "model_dump") else dict(response)
+            write_json(Path(trace_dir) / (started.strftime("%Y%m%dT%H%M%S%fZ") + ".json"), {
+                "started_at": started.isoformat(),
+                "finished_at": datetime.now(timezone.utc).isoformat(),
+                "request": request,
+                "response": raw,
+                "note": "Raw model exchange, not a statement that validation passed.",
+            })
+        if response.get("done_reason") == "length":
+            raise ValueError("Qwen reached its output limit; the response is incomplete.")
         text = response["message"]["content"]
     except Exception as error:
         # Do not retry, start a service, download a model, or fabricate a result.
