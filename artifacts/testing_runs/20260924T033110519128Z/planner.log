@@ -1,3 +1,4 @@
+Validated Qwen plan saved to artifacts/plan.json
 {
   "strategy": "Follow a clear goal bearing; otherwise try front, left, then right, and stop when all three paths are blocked.",
   "decisions": [

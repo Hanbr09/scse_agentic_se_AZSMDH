@@ -1,0 +1,40 @@
+{
+  "started_utc": "2026-09-24T03:31:10.519128+00:00",
+  "status": "passed",
+  "model": "qwen2.5:3b",
+  "free_memory_gib": 7.82,
+  "threads": 2,
+  "gpu_layers": 0,
+  "requested_stages": [
+    "analyst",
+    "planner",
+    "developer"
+  ],
+  "completed_stages": [
+    "analyst",
+    "planner",
+    "developer"
+  ],
+  "automatic_retries": 0,
+  "scripts": {
+    "analyst": "test_analyst.py",
+    "planner": "test_planner.py",
+    "developer": "test_developer.py"
+  },
+  "output_logs": {
+    "analyst": "artifacts/testing_runs/20260924T033110519128Z/analyst.log",
+    "planner": "artifacts/testing_runs/20260924T033110519128Z/planner.log",
+    "developer": "artifacts/testing_runs/20260924T033110519128Z/developer.log"
+  },
+  "ollama_version": "0.34.2",
+  "installed_model": {
+    "name": "qwen2.5:3b",
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "size": 1929912432
+  },
+  "checked_sensor_states": 64,
+  "remaining_model_processes": [],
+  "port_still_listening": false,
+  "cleanup_confirmed": true,
+  "finished_utc": "2026-09-24T03:32:35.917453+00:00"
+}

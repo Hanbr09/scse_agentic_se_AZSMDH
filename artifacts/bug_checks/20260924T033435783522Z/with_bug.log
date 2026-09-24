@@ -1,0 +1,77 @@
+test_all_goal_flags (__main__.NavigationMatrixTests) ... ok
+test_goal_ahead (__main__.NavigationMatrixTests) ... test_goal_left (__main__.NavigationMatrixTests) ... ok
+test_goal_right (__main__.NavigationMatrixTests) ... test_goals_ahead_and_left (__main__.NavigationMatrixTests) ... ok
+test_goals_ahead_and_right (__main__.NavigationMatrixTests) ... test_goals_left_and_right (__main__.NavigationMatrixTests) ... ok
+test_teacher_example (__main__.NavigationMatrixTests) ... ok
+test_unknown_goal (__main__.NavigationMatrixTests) ... test_updated_sensor_state_is_not_cached (__main__.NavigationMatrixTests) ... ok
+
+======================================================================
+FAIL: test_goal_ahead (__main__.NavigationMatrixTests) (goals='A', blocked=(True, False, False))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\PyCharm Projects\pension_swb_cgss\网页设计作业汇总\scse_agentic_se_AZSMDH\test_generated_navigation_logic.py", line 46, in check_group
+    self.assertEqual(action, expected)
+AssertionError: 'RIGHT' != 'LEFT'
+- RIGHT
++ LEFT
+
+
+======================================================================
+FAIL: test_goal_ahead (__main__.NavigationMatrixTests) (goals='A', blocked=(True, False, True))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\PyCharm Projects\pension_swb_cgss\网页设计作业汇总\scse_agentic_se_AZSMDH\test_generated_navigation_logic.py", line 46, in check_group
+    self.assertEqual(action, expected)
+AssertionError: 'RIGHT' != 'LEFT'
+- RIGHT
++ LEFT
+
+
+======================================================================
+FAIL: test_goal_right (__main__.NavigationMatrixTests) (goals='R', blocked=(True, False, True))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\PyCharm Projects\pension_swb_cgss\网页设计作业汇总\scse_agentic_se_AZSMDH\test_generated_navigation_logic.py", line 46, in check_group
+    self.assertEqual(action, expected)
+AssertionError: 'RIGHT' != 'LEFT'
+- RIGHT
++ LEFT
+
+
+======================================================================
+FAIL: test_goals_ahead_and_right (__main__.NavigationMatrixTests) (goals='AR', blocked=(True, False, True))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\PyCharm Projects\pension_swb_cgss\网页设计作业汇总\scse_agentic_se_AZSMDH\test_generated_navigation_logic.py", line 46, in check_group
+    self.assertEqual(action, expected)
+AssertionError: 'RIGHT' != 'LEFT'
+- RIGHT
++ LEFT
+
+
+======================================================================
+FAIL: test_unknown_goal (__main__.NavigationMatrixTests) (goals='unknown', blocked=(True, False, False))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\PyCharm Projects\pension_swb_cgss\网页设计作业汇总\scse_agentic_se_AZSMDH\test_generated_navigation_logic.py", line 46, in check_group
+    self.assertEqual(action, expected)
+AssertionError: 'RIGHT' != 'LEFT'
+- RIGHT
++ LEFT
+
+
+======================================================================
+FAIL: test_unknown_goal (__main__.NavigationMatrixTests) (goals='unknown', blocked=(True, False, True))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\PyCharm Projects\pension_swb_cgss\网页设计作业汇总\scse_agentic_se_AZSMDH\test_generated_navigation_logic.py", line 46, in check_group
+    self.assertEqual(action, expected)
+AssertionError: 'RIGHT' != 'LEFT'
+- RIGHT
++ LEFT
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.004s
+
+FAILED (failures=6)

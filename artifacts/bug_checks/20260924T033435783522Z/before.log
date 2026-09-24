@@ -1,0 +1,15 @@
+test_all_goal_flags (__main__.NavigationMatrixTests) ... ok
+test_goal_ahead (__main__.NavigationMatrixTests) ... ok
+test_goal_left (__main__.NavigationMatrixTests) ... ok
+test_goal_right (__main__.NavigationMatrixTests) ... ok
+test_goals_ahead_and_left (__main__.NavigationMatrixTests) ... ok
+test_goals_ahead_and_right (__main__.NavigationMatrixTests) ... ok
+test_goals_left_and_right (__main__.NavigationMatrixTests) ... ok
+test_teacher_example (__main__.NavigationMatrixTests) ... ok
+test_unknown_goal (__main__.NavigationMatrixTests) ... ok
+test_updated_sensor_state_is_not_cached (__main__.NavigationMatrixTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK

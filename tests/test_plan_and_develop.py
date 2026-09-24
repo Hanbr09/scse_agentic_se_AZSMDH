@@ -29,7 +29,7 @@ REQUIREMENTS = {
     "safe_stop": True, "avoid_obstacles": True,
 }
 PLAN = {
-    "strategy": "Prefer a safe goal direction; otherwise choose front, left, right, or stop.",
+    "strategy": planner.STRATEGY,
     "decisions": [{"condition": name, "action": action} for name, action in planner.RULE_ACTIONS.items()],
     "stop_condition": "all_blocked",
 }
@@ -37,18 +37,38 @@ PLAN = {
 CODE = '''def choose_action(front_blocked, left_blocked, right_blocked, goal_direction=None):
     if goal_direction == "AHEAD" and not front_blocked:
         return "FORWARD"
-    if goal_direction == "LEFT" and not left_blocked:
+    elif goal_direction == "LEFT" and not left_blocked:
         return "LEFT"
-    if goal_direction == "RIGHT" and not right_blocked:
+    elif goal_direction == "RIGHT" and not right_blocked:
         return "RIGHT"
-    if not front_blocked:
+    elif not front_blocked:
         return "FORWARD"
-    if not left_blocked:
+    elif not left_blocked:
         return "LEFT"
-    if not right_blocked:
+    elif not right_blocked:
         return "RIGHT"
-    return "STOP"
+    else:
+        return "STOP"
+
+
+def decide_next_move(state):
+    front_blocked = state["front_blocked"]
+    left_blocked = state["left_blocked"]
+    right_blocked = state["right_blocked"]
+    goal_direction = None
+    if state["goal_ahead"] and not front_blocked:
+        goal_direction = "AHEAD"
+    elif state["goal_on_left"] and not left_blocked:
+        goal_direction = "LEFT"
+    elif state["goal_on_right"] and not right_blocked:
+        goal_direction = "RIGHT"
+    return choose_action(front_blocked, left_blocked, right_blocked, goal_direction)
 '''
+
+
+def sample_state(front, left, right, goal=None):
+    return {"front_blocked": front, "left_blocked": left, "right_blocked": right,
+            "goal_ahead": goal == "AHEAD", "goal_on_left": goal == "LEFT", "goal_on_right": goal == "RIGHT"}
 
 
 class PlanTests(unittest.TestCase):
@@ -57,11 +77,15 @@ class PlanTests(unittest.TestCase):
         self.assertIs(planner.validate_plan(plan), plan)
         self.assertEqual(plan, PLAN)
 
-    def test_all_six_fallback_orders_are_design_choices(self):
+    def test_testing_retains_the_original_fallback_order(self):
         for order in permutations(PLAN["decisions"][3:6]):
             plan = deepcopy(PLAN)
             plan["decisions"][3:6] = list(order)
-            self.assertIs(planner.validate_plan(plan), plan)
+            if list(order) == PLAN["decisions"][3:6]:
+                self.assertIs(planner.validate_plan(plan), plan)
+            else:
+                with self.assertRaises(ValueError):
+                    planner.validate_plan(plan)
 
     def test_rejects_wrong_types_and_keys(self):
         values = [None, [], "{}", {}, dict(PLAN, extra=True)]
@@ -123,15 +147,15 @@ class CodeTests(unittest.TestCase):
     def test_valid_code_is_unchanged_and_all_combinations_checked(self):
         self.assertIs(developer.validate_code(CODE, PLAN), CODE)
         cases = developer.check_navigation(CODE, PLAN)
-        self.assertEqual(len(cases), 32)
+        self.assertEqual(len(cases), 64)
         self.assertTrue(all(case["actual"] == case["expected"] for case in cases))
-        self.assertEqual(sum(case["actual"] == "STOP" for case in cases), 4)
+        self.assertEqual(sum(case["actual"] == "STOP" for case in cases), 8)
 
-    def test_actual_optional_argument(self):
+    def test_unknown_and_known_goal_through_public_entrypoint(self):
         choose = developer.load_navigation(CODE)
-        self.assertEqual(choose(True, False, False), "LEFT")
-        self.assertEqual(choose(True, True, True), "STOP")
-        self.assertEqual(choose(False, False, False, "RIGHT"), "RIGHT")
+        self.assertEqual(choose(sample_state(True, False, False)), "LEFT")
+        self.assertEqual(choose(sample_state(True, True, True)), "STOP")
+        self.assertEqual(choose(sample_state(False, False, False, "RIGHT")), "RIGHT")
 
     def test_rejects_bad_code_and_signature(self):
         samples = (None, "", "x" * 12001, "```python\n" + CODE + "```",
@@ -168,8 +192,15 @@ class CodeTests(unittest.TestCase):
     def test_safe_code_must_also_follow_plan_fallback_order(self):
         plan = deepcopy(PLAN)
         plan["decisions"][3], plan["decisions"][4] = plan["decisions"][4], plan["decisions"][3]
-        with self.assertRaisesRegex(ValueError, "disagrees with the plan"):
+        with self.assertRaises(ValueError):
             developer.validate_code(CODE, plan)
+
+    def test_wrapper_cannot_recurse_or_modify_sensors(self):
+        for replacement in ("return decide_next_move(state)", 'state["front_blocked"] = False',
+                            'return open("secret.txt")', "while True:\n        pass"):
+            code = CODE.replace("return choose_action(front_blocked, left_blocked, right_blocked, goal_direction)", replacement)
+            with self.subTest(replacement=replacement), self.assertRaises(ValueError):
+                developer.load_navigation(code)
 
     def test_developer_sends_only_plan_and_keeps_model_text(self):
         with patch.object(developer, "ask_qwen", return_value=CODE) as ask:
@@ -189,6 +220,7 @@ class ArtifactTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.folder = Path(self.temp.name)
+        artifact_io.write_text(self.folder / "brief.txt", "Synthetic brief for an offline test.\n")
 
     def invoke(self, module, args):
         with patch.object(module, "BASE_DIR", self.folder), redirect_stdout(io.StringIO()):
@@ -199,7 +231,7 @@ class ArtifactTests(unittest.TestCase):
             with patch.object(module, name) as run:
                 self.assertEqual(self.invoke(module, []), 1)
                 run.assert_not_called()
-        self.assertEqual(list(self.folder.iterdir()), [])
+        self.assertEqual([path.name for path in self.folder.iterdir()], ["brief.txt"])
 
     def test_missing_input_prevents_model_request(self):
         for module, name in ((run_planner, "run_planner"), (run_developer, "run_developer")):
@@ -214,16 +246,20 @@ class ArtifactTests(unittest.TestCase):
         with patch.object(developer, "ask_qwen", return_value=CODE):
             self.assertEqual(self.invoke(run_developer, ["--allow-model"]), 0)
         self.assertEqual((self.folder / "navigation_logic.py").read_text(encoding="utf-8"), CODE)
-        for stage, supplied, response in (("planner", REQUIREMENTS, json.dumps(PLAN)), ("developer", PLAN, CODE)):
+        for stage, supplied, response, prompt in (
+                ("analyst", "Synthetic brief for an offline test.\n", json.dumps(REQUIREMENTS), analyst_agent.SYSTEM_PROMPT),
+                ("planner", REQUIREMENTS, json.dumps(PLAN), planner.SYSTEM_PROMPT),
+                ("developer", PLAN, CODE, developer.SYSTEM_PROMPT)):
             artifact_io.write_json(self.folder / "artifacts" / (stage + "_runs") / "test_fixture.json", {
                 "test_fixture": True,
-                "request": {"model": "offline-fixture", "options": {"num_gpu": 0, "num_thread": 2}, "keep_alive": 0,
-                            "messages": [{"role": "system", "content": "Offline fixture"},
-                                         {"role": "user", "content": json.dumps(supplied)}]},
+                "request": {"model": analyst_agent.MODEL, "stream": False,
+                            "options": {"temperature": 0, "num_gpu": 0, "num_thread": 2, "num_ctx": 2048, "num_predict": 768},
+                            "keep_alive": 0, "messages": [{"role": "system", "content": prompt},
+                            {"role": "user", "content": supplied if stage == "analyst" else json.dumps(supplied)}]},
                 "response": {"done": True, "done_reason": "stop", "message": {"content": response}},
             })
         report = verify_pipeline.verify(self.folder)
-        self.assertEqual(report["scenario_count"], 32)
+        self.assertEqual(report["scenario_count"], 64)
         for name in ("artifacts/requirements.json", "artifacts/plan.json", "navigation_logic.py"):
             path = self.folder / name
             path.write_bytes(path.read_text(encoding="utf-8").replace("\n", "\r\n").encode("utf-8"))
@@ -232,14 +268,16 @@ class ArtifactTests(unittest.TestCase):
     def test_verification_requires_matching_raw_model_evidence(self):
         artifact_io.write_json(self.folder / "artifacts" / "requirements.json", REQUIREMENTS)
         artifact_io.write_json(self.folder / "artifacts" / "plan.json", PLAN)
-        artifact_io.write_text(self.folder / "navigation_logic.py", CODE)
+        for name in ("navigation_logic.py", "generated/navigation_logic.py", "artifacts/navigation_logic.py"):
+            artifact_io.write_text(self.folder / name, CODE)
         with self.assertRaisesRegex(ValueError, "No complete model exchange"):
             verify_pipeline.verify(self.folder)
         self.assertFalse((self.folder / "artifacts" / "navigation_verification.json").exists())
 
     def test_modified_code_no_longer_matches_evidence(self):
         self.test_mocked_pipeline_saves_fixture_code_unchanged()
-        artifact_io.write_text(self.folder / "navigation_logic.py", CODE + "\n# manually changed\n")
+        for name in ("navigation_logic.py", "generated/navigation_logic.py", "artifacts/navigation_logic.py"):
+            artifact_io.write_text(self.folder / name, CODE + "\n")
         with self.assertRaisesRegex(ValueError, "No complete model exchange"):
             verify_pipeline.verify(self.folder)
 
@@ -296,7 +334,7 @@ class ArtifactTests(unittest.TestCase):
 
     def test_json_schema_passed_to_local_model(self):
         client = Mock()
-        client.chat.return_value = {"message": {"content": json.dumps(PLAN)}}
+        client.chat.return_value = {"done": True, "message": {"content": json.dumps(PLAN)}}
         sdk = SimpleNamespace(Client=Mock(return_value=client))
         with patch.dict(sys.modules, {"ollama": sdk}):
             analyst_agent.ask_qwen("role", "data", response_schema=planner.PLAN_SCHEMA)
@@ -304,7 +342,7 @@ class ArtifactTests(unittest.TestCase):
         self.assertEqual(client.chat.call_args.kwargs["keep_alive"], 0)
 
     def test_entry_points_work_from_another_directory_without_model(self):
-        for name in ("run_planner.py", "run_developer.py"):
+        for name in ("run_planner.py", "run_developer.py", "test_analyst.py", "test_planner.py", "test_developer.py"):
             completed = subprocess.run([sys.executable, "-B", str(PROJECT / name)],
                                        cwd=self.folder, capture_output=True, text=True, timeout=10)
             self.assertEqual(completed.returncode, 1, completed.stderr)

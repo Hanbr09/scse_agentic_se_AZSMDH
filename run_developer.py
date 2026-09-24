@@ -20,8 +20,11 @@ def main(argv=None):
     try:
         plan = read_json(BASE_DIR / "artifacts" / "plan.json")
         code = run_developer(plan, trace_dir=BASE_DIR / "artifacts" / "developer_runs")
+        write_text(BASE_DIR / "generated" / "navigation_logic.py", code)
+        write_text(BASE_DIR / "artifacts" / "navigation_logic.py", code)
         write_text(BASE_DIR / "navigation_logic.py", code)
-        print("Qwen code passed all 32 navigation scenarios and was saved to navigation_logic.py")
+        print("Qwen code passed all 64 sensor states and was saved with matching artifact mirrors.")
+        print(code)
         return 0
     except (OSError, ValueError, RuntimeError) as error:
         print(f"Could not finish: {error}")

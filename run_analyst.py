@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from analyst_agent import run_analyst
+from artifact_io import write_json
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -20,13 +21,11 @@ def main(argv=None):
 
     try:
         brief_text = (BASE_DIR / "brief.txt").read_text(encoding="utf-8-sig")
-        requirements = run_analyst(brief_text)
+        requirements = run_analyst(brief_text, trace_dir=BASE_DIR / "artifacts" / "analyst_runs")
         output_path = BASE_DIR / "artifacts" / "requirements.json"
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        with output_path.open("w", encoding="utf-8") as output:
-            json.dump(requirements, output, indent=2, ensure_ascii=False)
-            output.write("\n")
+        write_json(output_path, requirements)
         print("Validated Qwen requirements saved to artifacts/requirements.json")
+        print(json.dumps(requirements, indent=2, ensure_ascii=False))
         return 0
     except (OSError, ValueError, RuntimeError) as error:
         print(f"Could not finish: {error}")

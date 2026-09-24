@@ -1,0 +1,91 @@
+{
+  "checked_utc": "2026-09-24T03:37:45.029879+00:00",
+  "group": "AZSMDH",
+  "status": "passed",
+  "baseline_commit": "8a5bd4884e9c12d7e0f6a81b43b2274a124e2644",
+  "unchanged_earlier_inputs": [
+    "brief.txt",
+    "robot_requirements.txt",
+    "observations.md"
+  ],
+  "original_helper_preserved": true,
+  "teacher_source": {
+    "repository": "https://github.com/prabhatram/scse-26-project-testing",
+    "revision": "35c6700b663e3a29ecdc03bcc98345168f390ff6",
+    "pdf": "SCSE '26 - Project Instructions - Testing.pdf",
+    "pdf_sha256_bytes": "bf66b90e556a30993916babeb703a2033d067bcf663f24c742e56215ba1cfe8c"
+  },
+  "required_files": [
+    "test_analyst.py",
+    "test_planner.py",
+    "test_developer.py",
+    "test_generated_navigation_logic.py",
+    "artifacts/requirements.json",
+    "artifacts/plan.json",
+    "artifacts/navigation_logic.py",
+    "generated/navigation_logic.py"
+  ],
+  "sha256_utf8_lf": {
+    "test_analyst.py": "419246fcd4f35d265515b93a44f24d7e845df786bb2e7eb07d5cd4b9cf959fd3",
+    "test_planner.py": "71e1a772921f7475ce9d57a211b5fb6aa86fe4f2ba678e63cadc7c93b358a346",
+    "test_developer.py": "c22e20b130e825ec111c5ceac1251f0f66ecec1761e77b5f9df7e9bb4f337c3b",
+    "test_generated_navigation_logic.py": "704291c8c454d91e0fa9a1ad1586b06bafbc4d2e90d013fabaa10ea0daeb4633",
+    "artifacts/requirements.json": "decbf8089eebdb0e27a28ee78afe03f3a4fe01d0aa484c63803f51d9c11ea783",
+    "artifacts/plan.json": "5982f0621f59284140ad915b9278592ce8125f78dfee0e634e1f4e54a5975823",
+    "artifacts/navigation_logic.py": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+    "generated/navigation_logic.py": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb"
+  },
+  "real_agent_exchanges": {
+    "analyst": {
+      "file": "20260924T033112084187Z.json",
+      "model": "qwen2.5:3b",
+      "eval_count": 49
+    },
+    "planner": {
+      "file": "20260924T033129751768Z.json",
+      "model": "qwen2.5:3b",
+      "eval_count": 138
+    },
+    "developer": {
+      "file": "20260924T033154706411Z.json",
+      "model": "qwen2.5:3b",
+      "eval_count": 232
+    }
+  },
+  "sensor_states": 64,
+  "offline_runs": [
+    {
+      "checked_utc": "2026-09-24T03:37:41.220739+00:00",
+      "python": "3.10.11",
+      "status": "passed",
+      "test_methods": 76,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "navigation_matrix_states": 64,
+      "log": "artifacts/testing_offline/python-3.10.11.log",
+      "note": "Eight matrix methods contain 64 subcases; method count is not state count. No model was called."
+    },
+    {
+      "checked_utc": "2026-09-24T03:37:44.111600+00:00",
+      "python": "3.12.0",
+      "status": "passed",
+      "test_methods": 76,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "navigation_matrix_states": 64,
+      "log": "artifacts/testing_offline/python-3.12.0.log",
+      "note": "Eight matrix methods contain 64 subcases; method count is not state count. No model was called."
+    }
+  ],
+  "deliberate_bug_assertion_failures": 6,
+  "original_bytes_restored": true,
+  "all_testing_sessions_cleaned_up": true,
+  "not_established_by_these_checks": [
+    "Physical robot or whole-route behavior",
+    "Missing/non-boolean sensors",
+    "Group classroom attendance",
+    "Moodle submission"
+  ]
+}

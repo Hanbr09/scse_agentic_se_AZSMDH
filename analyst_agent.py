@@ -1,14 +1,13 @@
 """Turn the navigation brief into validated requirements using Qwen."""
 
-import json
-import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-from artifact_io import write_json
+from artifact_io import parse_json, write_json
 
 
 ALLOWED_ACTIONS = ("FORWARD", "LEFT", "RIGHT", "STOP")
+MODEL = "qwen2.5:3b"
 REQUIRED_KEYS = {"goal", "allowed_actions", "safe_stop", "avoid_obstacles"}
 
 SYSTEM_PROMPT = """You are a requirements analyst for a mobile robot.
@@ -47,7 +46,7 @@ def ask_qwen(system_prompt, brief_text, json_output=False, *, response_schema=No
 
     client = ollama.Client(host="http://127.0.0.1:11434", timeout=120.0, trust_env=False)
     request = {
-        "model": os.environ.get("OLLAMA_MODEL", "qwen2.5:3b"),
+        "model": MODEL,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": brief_text},
@@ -71,6 +70,8 @@ def ask_qwen(system_prompt, brief_text, json_output=False, *, response_schema=No
             })
         if response.get("done_reason") == "length":
             raise ValueError("Qwen reached its output limit; the response is incomplete.")
+        if response.get("done") is not True:
+            raise ValueError("Qwen did not report a completed response.")
         text = response["message"]["content"]
     except Exception as error:
         # Do not retry, start a service, download a model, or fabricate a result.
@@ -101,9 +102,9 @@ def validate_requirements(result):
     return result
 
 
-def run_analyst(brief_text):
+def run_analyst(brief_text, *, trace_dir=None):
     if not isinstance(brief_text, str) or not brief_text.strip():
         raise ValueError("The brief must be nonempty text.")
-    response_text = ask_qwen(SYSTEM_PROMPT, brief_text, json_output=True)
-    result = json.loads(response_text)
+    response_text = ask_qwen(SYSTEM_PROMPT, brief_text, json_output=True, trace_dir=trace_dir)
+    result = parse_json(response_text)
     return validate_requirements(result)

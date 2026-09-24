@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-09-24T03:37:41.220739+00:00",
+  "python": "3.10.11",
+  "status": "passed",
+  "test_methods": 76,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "navigation_matrix_states": 64,
+  "log": "artifacts/testing_offline/python-3.10.11.log",
+  "note": "Eight matrix methods contain 64 subcases; method count is not state count. No model was called."
+}

@@ -1,5 +1,8 @@
 # Planning and Development Notes
 
+This is the historical record of the September 23 stage. The Testing extension
+is documented in TESTING_NOTES.md; the former artifacts are in artifacts/baseline/.
+
 ## From requirements to a decision policy
 
 The original brief describes a robot with three obstacle signals and

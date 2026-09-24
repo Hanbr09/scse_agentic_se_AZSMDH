@@ -1,0 +1,39 @@
+{
+  "started_utc": "2026-09-24T03:28:27.639618+00:00",
+  "status": "failed",
+  "model": "qwen2.5:3b",
+  "free_memory_gib": 7.93,
+  "threads": 2,
+  "gpu_layers": 0,
+  "requested_stages": [
+    "analyst",
+    "planner",
+    "developer"
+  ],
+  "completed_stages": [
+    "analyst",
+    "planner"
+  ],
+  "automatic_retries": 0,
+  "scripts": {
+    "analyst": "test_analyst.py",
+    "planner": "test_planner.py",
+    "developer": "test_developer.py"
+  },
+  "output_logs": {
+    "analyst": "artifacts/testing_runs/20260924T032827638354Z/analyst.log",
+    "planner": "artifacts/testing_runs/20260924T032827638354Z/planner.log",
+    "developer": "artifacts/testing_runs/20260924T032827638354Z/developer.log"
+  },
+  "ollama_version": "0.34.2",
+  "installed_model": {
+    "name": "qwen2.5:3b",
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "size": 1929912432
+  },
+  "failure": "CalledProcessError: Command '['D:\\\\Projects\\\\PyCharm Projects\\\\pension_swb_cgss\\\\网页设计作业汇总\\\\scse_agentic_se_AZSMDH\\\\.venv\\\\Scripts\\\\python.exe', '-B', 'D:\\\\Projects\\\\PyCharm Projects\\\\pension_swb_cgss\\\\网页设计作业汇总\\\\scse_agentic_se_AZSMDH\\\\test_developer.py', '--allow-model']' returned non-zero exit status 1.",
+  "remaining_model_processes": [],
+  "port_still_listening": false,
+  "cleanup_confirmed": true,
+  "finished_utc": "2026-09-24T03:29:38.603979+00:00"
+}

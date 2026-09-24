@@ -1,5 +1,6 @@
+Validated Qwen plan saved to artifacts/plan.json
 {
-  "strategy": "Follow a clear goal bearing; otherwise try front, left, then right, and stop when all three paths are blocked.",
+  "strategy": "Choose the safest goal direction if available, otherwise proceed safely without turning.",
   "decisions": [
     {
       "condition": "goal_ahead_and_clear",

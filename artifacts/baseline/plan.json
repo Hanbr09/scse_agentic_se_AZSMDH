@@ -1,5 +1,5 @@
 {
-  "strategy": "Follow a clear goal bearing; otherwise try front, left, then right, and stop when all three paths are blocked.",
+  "strategy": "Determine the next move based on the goal direction or safe clear directions in a fixed order.",
   "decisions": [
     {
       "condition": "goal_ahead_and_clear",

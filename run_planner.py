@@ -22,6 +22,7 @@ def main(argv=None):
         plan = run_planner(requirement, trace_dir=BASE_DIR / "artifacts" / "planner_runs")
         write_json(BASE_DIR / "artifacts" / "plan.json", plan)
         print("Validated Qwen plan saved to artifacts/plan.json")
+        print((BASE_DIR / "artifacts" / "plan.json").read_text(encoding="utf-8"), end="")
         return 0
     except (OSError, ValueError, RuntimeError) as error:
         print(f"Could not finish: {error}")

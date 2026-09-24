@@ -18,9 +18,14 @@ def main(argv=None):
     parser.add_argument("--goal", choices=("AHEAD", "LEFT", "RIGHT"), default=None)
     args = parser.parse_args(argv)
     try:
-        code = (BASE_DIR / "navigation_logic.py").read_text(encoding="utf-8")
+        code = (BASE_DIR / "generated" / "navigation_logic.py").read_text(encoding="utf-8")
         validate_code(code, read_json(BASE_DIR / "artifacts" / "plan.json"))
-        action = load_navigation(code)(args.front_blocked, args.left_blocked, args.right_blocked, args.goal)
+        state = {
+            "front_blocked": args.front_blocked, "left_blocked": args.left_blocked,
+            "right_blocked": args.right_blocked, "goal_ahead": args.goal == "AHEAD",
+            "goal_on_left": args.goal == "LEFT", "goal_on_right": args.goal == "RIGHT",
+        }
+        action = load_navigation(code)(state)
         print(f"Action: {action}")
         return 0
     except (OSError, ValueError) as error:

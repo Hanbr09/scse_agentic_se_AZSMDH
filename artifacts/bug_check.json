@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-24T03:34:35.783522+00:00",
+  "source": "generated/navigation_logic.py",
+  "before_sha256": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+  "before": {
+    "exit_code": 0,
+    "log": "artifacts/bug_checks/20260924T033435783522Z/before.log"
+  },
+  "change": {
+    "location": "choose_action: clear-left fallback",
+    "before": "return 'LEFT'",
+    "after": "return \"RIGHT\""
+  },
+  "faulty_sha256": "47db24d2feae825145ad6299d92b3c844f471cddbb7029e66e05e2e6f98a0964",
+  "with_bug": {
+    "exit_code": 1,
+    "log": "artifacts/bug_checks/20260924T033435783522Z/with_bug.log"
+  },
+  "after_restore": {
+    "exit_code": 0,
+    "log": "artifacts/bug_checks/20260924T033435783522Z/after_restore.log"
+  },
+  "after_sha256": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb"
+}

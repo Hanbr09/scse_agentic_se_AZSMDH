@@ -1,0 +1,12 @@
+Validated Qwen requirements saved to artifacts/requirements.json
+{
+  "goal": "Navigate towards its goal while avoiding obstacles",
+  "allowed_actions": [
+    "FORWARD",
+    "LEFT",
+    "RIGHT",
+    "STOP"
+  ],
+  "safe_stop": true,
+  "avoid_obstacles": true
+}
