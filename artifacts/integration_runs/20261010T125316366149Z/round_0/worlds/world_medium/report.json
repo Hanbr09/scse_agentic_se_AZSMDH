@@ -1,0 +1,20 @@
+{
+  "reached_goal": true,
+  "collision_or_done": false,
+  "steps_taken": 148,
+  "max_steps_allowed": 300,
+  "efficient_step_limit": 200,
+  "efficiency_status": "efficient",
+  "efficiency_passed": true,
+  "final_pose": [
+    7.712490771958734,
+    4.253312110735628,
+    -0.40000000000000036
+  ],
+  "history_length": 148,
+  "world": "world_medium.yaml",
+  "collision_before_cleanup": false,
+  "done_before_cleanup": false,
+  "navigation_sha256": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+  "world_sha256": "bf94e0a9772f399d37692c1e8825b3cdfa77b5e8231069a72e4dcca784943063"
+}

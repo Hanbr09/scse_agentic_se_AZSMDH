@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "rounds": 2,
+  "model_exchanges": 12,
+  "generated_tests_per_round": 64,
+  "logical_states_per_round": 64,
+  "worlds_per_round": 4,
+  "mean_steps": 169.5
+}

@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-10T13:07:23.079128+00:00",
+  "status": "error",
+  "model": "qwen2.5:3b",
+  "rounds": [
+    {
+      "round": 0,
+      "passed": true,
+      "navigation_sha256": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+      "scenario_passes": 64,
+      "goals_reached": 4,
+      "average_steps": 169.5
+    }
+  ],
+  "text_hash_convention": "UTF-8 with LF line endings",
+  "error": "ValueError: Define choose_action followed by decide_next_move.",
+  "finished_at": "2026-10-10T13:08:19.107520+00:00"
+}

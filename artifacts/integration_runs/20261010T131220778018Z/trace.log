@@ -1,0 +1,39 @@
+2026-10-10 21:12:22,918 INFO Loaded the original brief.
+2026-10-10 21:12:25,566 INFO Previous-stage regression tests passed.
+2026-10-10 21:12:25,566 INFO Analyst Agent: reading brief.txt
+2026-10-10 21:12:32,290 INFO Analyst Agent created round_0/requirements.json
+2026-10-10 21:12:34,623 INFO Planner Agent created round_0/plan.json
+2026-10-10 21:12:37,524 INFO Developer Agent created round_0/navigation_logic.py
+2026-10-10 21:12:45,160 INFO Test Agent created round_0/test_navigation.py
+2026-10-10 21:12:47,326 INFO Generated tests: {'tests': 64, 'failures': 0, 'errors': 0, 'skipped': 0, 'returncode': 0, 'passed': True}; wrong-action control detected: True
+2026-10-10 21:12:47,329 INFO Simulation: 64/64 scenarios passed
+2026-10-10 21:12:48,796 INFO Reviewer Agent created simulation_review.json; needs_revision=False
+2026-10-10 21:12:48,796 INFO IR-SIM starting world_easy.yaml
+2026-10-10 21:12:56,558 INFO IR-SIM world_easy.yaml: goal=True steps=150 efficiency=efficient
+2026-10-10 21:12:56,558 INFO IR-SIM starting world_medium.yaml
+2026-10-10 21:13:04,353 INFO IR-SIM world_medium.yaml: goal=True steps=148 efficiency=efficient
+2026-10-10 21:13:04,353 INFO IR-SIM starting world_hard.yaml
+2026-10-10 21:13:12,564 INFO IR-SIM world_hard.yaml: goal=True steps=187 efficiency=efficient
+2026-10-10 21:13:12,565 INFO IR-SIM starting world_custom.yaml
+2026-10-10 21:13:20,707 INFO IR-SIM world_custom.yaml: goal=True steps=193 efficiency=efficient
+2026-10-10 21:13:20,710 INFO Benchmark: 4/4 goals reached
+2026-10-10 21:13:22,719 INFO Benchmark Reviewer created benchmark_review.json; needs_revision=False
+2026-10-10 21:13:22,732 INFO Analyst Agent: reading brief.txt
+2026-10-10 21:13:23,389 INFO Analyst Agent created round_1/requirements.json
+2026-10-10 21:13:30,316 INFO Planner Agent created round_1/plan.json
+2026-10-10 21:13:38,246 INFO Developer Agent created round_1/navigation_logic.py (revision)
+2026-10-10 21:13:45,931 INFO Test Agent created round_1/test_navigation.py
+2026-10-10 21:13:48,466 INFO Generated tests: {'tests': 64, 'failures': 0, 'errors': 0, 'skipped': 0, 'returncode': 0, 'passed': True}; wrong-action control detected: True
+2026-10-10 21:13:48,470 INFO Simulation: 64/64 scenarios passed
+2026-10-10 21:14:00,050 INFO Reviewer Agent created simulation_review.json; needs_revision=False
+2026-10-10 21:14:00,051 INFO IR-SIM starting world_easy.yaml
+2026-10-10 21:14:07,974 INFO IR-SIM world_easy.yaml: goal=True steps=150 efficiency=efficient
+2026-10-10 21:14:07,974 INFO IR-SIM starting world_medium.yaml
+2026-10-10 21:14:15,833 INFO IR-SIM world_medium.yaml: goal=True steps=148 efficiency=efficient
+2026-10-10 21:14:15,833 INFO IR-SIM starting world_hard.yaml
+2026-10-10 21:14:23,937 INFO IR-SIM world_hard.yaml: goal=True steps=187 efficiency=efficient
+2026-10-10 21:14:23,937 INFO IR-SIM starting world_custom.yaml
+2026-10-10 21:14:32,062 INFO IR-SIM world_custom.yaml: goal=True steps=193 efficiency=efficient
+2026-10-10 21:14:32,065 INFO Benchmark: 4/4 goals reached
+2026-10-10 21:14:39,065 INFO Benchmark Reviewer created benchmark_review.json; needs_revision=False
+2026-10-10 21:14:39,084 INFO Pipeline finished: passed

@@ -1,0 +1,969 @@
+{
+  "total_scenarios": 64,
+  "passed": 64,
+  "failed": 0,
+  "success_rate": 1.0,
+  "scope": "All 64 combinations; not a physical route guarantee.",
+  "results": [
+    {
+      "id": 1,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 2,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 3,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 4,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 5,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 6,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 7,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 8,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 9,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 10,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 11,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 12,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 13,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 14,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 15,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 16,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": false
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 17,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 18,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 19,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 20,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 21,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 22,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 23,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 24,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 25,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 26,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 27,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 28,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 29,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 30,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 31,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 32,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 33,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 34,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 35,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 36,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 37,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 38,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 39,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 40,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": false
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 41,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 42,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 43,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 44,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 45,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 46,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 47,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 48,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": false,
+        "goal_on_right": true
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 49,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 50,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 51,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 52,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 53,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 54,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 55,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 56,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": false,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 57,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 58,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 59,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 60,
+      "state": {
+        "front_blocked": false,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "FORWARD",
+      "actual": "FORWARD",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 61,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 62,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": false,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "LEFT",
+      "actual": "LEFT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 63,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": false,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "RIGHT",
+      "actual": "RIGHT",
+      "passed": true,
+      "error": null
+    },
+    {
+      "id": 64,
+      "state": {
+        "front_blocked": true,
+        "left_blocked": true,
+        "right_blocked": true,
+        "goal_ahead": true,
+        "goal_on_left": true,
+        "goal_on_right": true
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "passed": true,
+      "error": null
+    }
+  ]
+}

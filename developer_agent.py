@@ -213,3 +213,61 @@ def run_developer(plan, *, trace_dir=None):
     validate_plan(plan)
     code = ask_qwen(SYSTEM_PROMPT, json.dumps(plan, ensure_ascii=False), trace_dir=trace_dir)
     return validate_code(code, plan)
+
+
+REVISION_PROMPT = """Revise decide_next_move using the supplied original code,
+reviews, benchmark, requirements and plan. Return a JSON object with a code
+field containing ONLY def decide_next_move(state) and its complete body.
+No Markdown, imports, comments, examples or other functions. The application
+retains the original choose_action helper; do not copy or redefine it.
+state is a dictionary with six boolean keys. Start with local assignments:
+front_blocked = state["front_blocked"]
+left_blocked = state["left_blocked"]
+right_blocked = state["right_blocked"]
+selected_goal = None
+Use one if/elif chain to select the first clear indicated goal:
+state["goal_ahead"] and not front_blocked -> selected_goal = 'AHEAD';
+state["goal_on_left"] and not left_blocked -> selected_goal = 'LEFT';
+state["goal_on_right"] and not right_blocked -> selected_goal = 'RIGHT'.
+Finish with EXACTLY ONE return, outside the if/elif chain:
+    return choose_action(front_blocked, left_blocked, right_blocked, selected_goal)
+No other fallback, imports, loops, helpers or annotations.
+selected_goal is a local variable in decide_next_move. The existing helper
+still takes goal_direction as its fourth positional parameter.
+When the measurements already pass, this is a readability revision, not a
+claim to fix a failed route. Keep the benchmark limits and navigation policy.
+"""
+REVISION_SCHEMA = {
+    "type": "object",
+    "properties": {"code": {"type": "string", "minLength": 1, "maxLength": 8000}},
+    "required": ["code"], "additionalProperties": False,
+}
+
+
+def run_developer_revision(original_code, review_notes, benchmark_report,
+                           requirements, plan, *, trace_dir=None):
+    from analyst_agent import validate_requirements
+    from artifact_io import parse_json
+    validate_requirements(requirements)
+    validate_plan(plan)
+    validate_code(original_code, plan)
+    payload = {"original_code": original_code, "review_notes": review_notes,
+               "benchmark_report": benchmark_report,
+               "requirements": requirements, "plan": plan}
+    reply = parse_json(ask_qwen(REVISION_PROMPT, json.dumps(payload),
+                               response_schema=REVISION_SCHEMA, trace_dir=trace_dir))
+    if not isinstance(reply, dict) or set(reply) != {"code"}:
+        raise ValueError("Developer revision must return exactly the code field.")
+    adapter = reply["code"]
+    if not isinstance(adapter, str) or not adapter.strip() or len(adapter) > 8000:
+        raise ValueError("Expected a revised adapter source string.")
+    try:
+        tree = ast.parse(adapter)
+    except (SyntaxError, ValueError, RecursionError) as error:
+        raise ValueError("Invalid revised adapter syntax.") from error
+    if (len(tree.body) != 1 or not isinstance(tree.body[0], ast.FunctionDef)
+            or tree.body[0].name != "decide_next_move"):
+        raise ValueError("The revision must contain only decide_next_move.")
+    # Preserve the earlier helper without asking the model to reproduce it.
+    code = ORIGINAL_CODE.rstrip() + "\n\n" + adapter
+    return validate_code(code, plan)

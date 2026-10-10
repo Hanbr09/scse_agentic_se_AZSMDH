@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-10-10T13:12:22.915987+00:00",
+  "status": "passed",
+  "model": "qwen2.5:3b",
+  "rounds": [
+    {
+      "round": 0,
+      "passed": true,
+      "navigation_sha256": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+      "scenario_passes": 64,
+      "goals_reached": 4,
+      "average_steps": 169.5
+    },
+    {
+      "round": 1,
+      "passed": true,
+      "navigation_sha256": "ad690c3c44ca48988a8bdecb75ccb9d8e1560c5b72c5a9e84ce06e36d95680e2",
+      "scenario_passes": 64,
+      "goals_reached": 4,
+      "average_steps": 169.5
+    }
+  ],
+  "text_hash_convention": "UTF-8 with LF line endings",
+  "revision_changed_source": true,
+  "finished_at": "2026-10-10T13:14:39.084656+00:00"
+}

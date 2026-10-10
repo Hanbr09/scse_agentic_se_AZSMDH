@@ -1,0 +1,40 @@
+{
+  "repository": "https://github.com/prabhatram/project_integration_and_simulation",
+  "commit": "25479e19c5f908fc2cc138c032e0ea5105777a4a",
+  "hash_convention": "UTF-8 with LF line endings",
+  "files": {
+    "run_visual.sh": "4b8b8b2330c77763e339397a558bcba6815202ddc6c9affb512cff0e93eee78b",
+    "test_irsim_with_agent.py": "81283a3a4a06acdec29cb89e0526cae762bd66ea50c4dc826168c3c1c87f9b23",
+    "irsim_worlds/world_easy.yaml": "aa4b19b9f458e3518eee862e3cad10965c4aef57d720072c862fab3e727f0f2d",
+    "irsim_worlds/world_medium.yaml": "002efc0ca6cdea162e09cbd1f053dba290ca2bc99e713e47dfaf6463fbc9a1b6",
+    "irsim_worlds/world_hard.yaml": "7cf16e09c5e31cea46295907d4f18d0ac7abade92721ce742c4c9e68f7537afb",
+    "irsim_worlds/world_custom.yaml": "6981f7491fb59e2a5fe3889f996924a3a1b2a36c23c2e92876b5eeb31e9f8b8c"
+  },
+  "previous_commit": "8361c595a7f1fe14db7ed3725293a7e32d831150",
+  "previous_source_files": {
+    "analyst_agent.py": "9b04af521c04192bcee34a8679dc49b1ea33191f619d91afc36667b3346b9ee0",
+    "artifact_io.py": "186fdb6c9aa521cc857e844ecdc4ae1e7255fbd2c63cb900553405a2837a4520",
+    "artifacts/baseline/navigation_logic.py": "222fb571a12faf0cf7aa43df2d244b2aff1f814175af373f87cdeffcc3bec300",
+    "artifacts/navigation_logic.py": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+    "brief_to_req.py": "245e4b6d3dfc03138348ad14385ffddfb8cfa7b2f7b5f5fc4ad33dc633563a02",
+    "demo_navigation.py": "8f5864a55d146a0b03671f947b43cfe0fa51e3bf59b617d9d4448060660467d3",
+    "generated/navigation_logic.py": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+    "navigation_logic.py": "09371ee522c73665e987512ff51f4e574ab7aa051a337750021aeae4fb785aeb",
+    "planner_agent.py": "283823f02caf6729847d27cb685788cba488979c1f2dc01e4270b409e761ba86",
+    "run_analyst.py": "c4680d801b5d5f69586344c348c422c341e9feb35fa7fd90757f91d65f474bc8",
+    "run_bug_check.py": "6e488a97e011f963a296bd0f4562b8bcac88acce3a1db7a5ffb2bdea2f6061df",
+    "run_developer.py": "487ee2e4bf1924a2d94d4c3a2ac998cd1fc9bffb8839c6167f407b71d364d258",
+    "run_planner.py": "48341e3fe09748660ed12b51494c75123b08888a49ff2055e05b568b590ab28a",
+    "run_smoke_tests.py": "185b580073b30e9412b334c8ac8916f8b04c1471fd653d7ed7f6c794c0eaec20",
+    "test_analyst.py": "419246fcd4f35d265515b93a44f24d7e845df786bb2e7eb07d5cd4b9cf959fd3",
+    "test_developer.py": "c22e20b130e825ec111c5ceac1251f0f66ecec1761e77b5f9df7e9bb4f337c3b",
+    "test_generated_navigation_logic.py": "704291c8c454d91e0fa9a1ad1586b06bafbc4d2e90d013fabaa10ea0daeb4633",
+    "test_planner.py": "71e1a772921f7475ce9d57a211b5fb6aa86fe4f2ba678e63cadc7c93b358a346",
+    "tests/__init__.py": "f10bb43f40176f9f7d0a1cf2a563a9ea49f20705bf465c2cb45ac9793c120fe1",
+    "tests/test_analyst.py": "a0932685152c33310c458becb20ad868fe0afb94efe4a12018de7bfc1e8fa4e1",
+    "tests/test_bug_check.py": "3d8cbe18fb884cfe5c3da95f1cde855bfea8900597cb30acd3fb3b214e2975e1",
+    "tests/test_plan_and_develop.py": "12f6574fc12dd93b1f61d439705c0e3e76b37e9db9c79036ad5d9ff3bbb2a5a5",
+    "tests/test_smoke_runner.py": "c067540bb92aee839ef566e98b7867c1d4771afa8501ee33ba85acdde31a6956",
+    "verify_pipeline.py": "af7c3630d1ebd937fafdbcd77fdc52e1ecf9eba212c1d724e2ba09b955b903a4"
+  }
+}

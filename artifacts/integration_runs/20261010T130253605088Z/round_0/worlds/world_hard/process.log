@@ -1,0 +1,403 @@
+[32m2026-10-10 21:03[0m | [33m[1mWARNING [0m | [33m[1mpynput is not available. Using matplotlib backend.[0m
+[32m2026-10-10 21:03[0m | [1mINFO    [0m | [1mSimulation environment 'world_hard' started. Step time 0.100 s.[0m
+LOADED GOAL FROM WORLD: [8.0, 8.0]
+DEBUG build_state -> x=1.00, y=1.00, theta=0.00, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_}
+Step 1: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.03, y=1.00, theta=0.08, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=1
+Step 2: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.06, y=1.00, theta=0.16, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=0
+Step 3: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.09, y=1.01, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_}
+Step 4: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.12, y=1.01, theta=0.32, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=1
+Step 5: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.True_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.15, y=1.02, theta=0.40, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=0
+Step 6: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.17, y=1.04, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 7: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.23, y=1.06, theta=0.48, state={'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 8: state={'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.25, y=1.08, theta=0.56, state={'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=1
+Step 9: state={'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.28, y=1.09, theta=0.64, state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=0
+Step 10: state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.30, y=1.11, theta=0.72, state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 11: state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.33, y=1.13, theta=0.80, state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=1
+Step 12: state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.35, y=1.15, theta=0.88, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=0
+Step 13: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=1.37, y=1.18, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 14: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.40, y=1.22, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 15: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.44, y=1.27, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 16: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.47, y=1.32, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 17: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.50, y=1.37, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 18: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.54, y=1.42, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 19: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.57, y=1.47, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 20: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.61, y=1.52, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 21: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.64, y=1.57, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 22: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.68, y=1.62, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 23: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.71, y=1.67, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 24: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.75, y=1.72, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 25: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.78, y=1.77, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 26: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.81, y=1.81, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 27: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.85, y=1.86, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 28: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.88, y=1.91, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 29: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.92, y=1.96, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 30: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.95, y=2.01, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 31: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=1.99, y=2.06, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 32: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.02, y=2.11, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 33: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.05, y=2.16, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 34: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.09, y=2.21, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 35: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.12, y=2.26, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 36: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.16, y=2.31, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 37: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.19, y=2.35, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 38: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.23, y=2.40, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 39: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.26, y=2.45, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 40: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.30, y=2.50, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 41: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.33, y=2.55, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 42: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.36, y=2.60, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 43: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.40, y=2.65, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 44: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.43, y=2.70, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 45: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.47, y=2.75, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 46: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.50, y=2.80, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 47: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.54, y=2.85, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 48: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.57, y=2.90, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 49: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.61, y=2.94, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 50: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.64, y=2.99, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 51: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.67, y=3.04, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 52: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.71, y=3.09, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 53: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.74, y=3.14, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 54: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.78, y=3.19, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 55: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.81, y=3.24, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 56: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.85, y=3.29, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 57: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.88, y=3.34, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 58: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.92, y=3.39, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 59: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.95, y=3.44, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 60: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=2.98, y=3.49, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 61: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.02, y=3.53, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 62: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.05, y=3.58, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 63: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.09, y=3.63, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 64: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.12, y=3.68, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 65: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.16, y=3.73, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 66: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.19, y=3.78, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 67: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.22, y=3.83, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 68: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.26, y=3.88, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 69: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.29, y=3.93, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 70: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.33, y=3.98, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 71: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.36, y=4.03, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 72: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.40, y=4.08, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 73: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.43, y=4.12, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 74: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.47, y=4.17, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 75: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.50, y=4.22, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 76: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.53, y=4.27, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 77: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.57, y=4.32, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 78: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.60, y=4.37, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 79: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.64, y=4.42, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 80: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.67, y=4.47, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 81: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.71, y=4.52, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 82: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.74, y=4.57, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 83: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.78, y=4.62, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 84: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.81, y=4.67, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 85: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.84, y=4.71, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 86: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.88, y=4.76, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 87: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.91, y=4.81, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 88: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.95, y=4.86, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 89: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=3.98, y=4.91, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 90: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.02, y=4.96, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 91: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.05, y=5.01, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 92: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.09, y=5.06, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 93: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.12, y=5.11, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 94: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.15, y=5.16, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 95: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.19, y=5.21, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 96: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.22, y=5.25, theta=0.96, state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 97: state={'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=4.24, y=5.28, theta=1.04, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=1
+Step 98: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=4.26, y=5.31, theta=1.12, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+TURN LOCK ACTIVE -> action=LEFT, remaining=0
+Step 99: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=LEFT velocity=[0.3 0.8]
+DEBUG build_state -> x=4.27, y=5.33, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 100: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.29, y=5.39, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 101: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.31, y=5.44, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 102: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.33, y=5.50, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 103: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.36, y=5.56, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 104: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.38, y=5.61, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 105: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.40, y=5.67, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 106: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.42, y=5.72, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 107: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.44, y=5.78, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 108: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.46, y=5.84, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 109: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.49, y=5.89, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 110: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.51, y=5.95, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 111: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.53, y=6.00, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 112: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.55, y=6.06, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 113: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.57, y=6.12, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 114: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.59, y=6.17, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 115: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.62, y=6.23, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 116: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.64, y=6.28, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 117: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.66, y=6.34, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 118: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.68, y=6.39, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 119: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.70, y=6.45, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 120: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.72, y=6.51, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 121: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.75, y=6.56, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 122: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.77, y=6.62, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 123: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.79, y=6.67, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 124: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.81, y=6.73, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 125: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.83, y=6.79, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 126: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.86, y=6.84, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 127: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.88, y=6.90, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 128: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=4.90, y=6.95, theta=1.20, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 129: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=4.91, y=6.98, theta=1.12, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=1
+Step 130: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=4.92, y=7.01, theta=1.04, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=0
+Step 131: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=4.94, y=7.03, theta=0.96, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 132: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=4.96, y=7.06, theta=0.88, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=1
+Step 133: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=4.97, y=7.08, theta=0.80, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=0
+Step 134: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=5.00, y=7.10, theta=0.72, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 135: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=5.02, y=7.12, theta=0.64, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=1
+Step 136: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=5.04, y=7.14, theta=0.56, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=0
+Step 137: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=5.07, y=7.16, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 138: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.12, y=7.19, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 139: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.17, y=7.21, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 140: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.23, y=7.24, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 141: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.28, y=7.27, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 142: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.33, y=7.30, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 143: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.39, y=7.32, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 144: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.44, y=7.35, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 145: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.49, y=7.38, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 146: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.55, y=7.41, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 147: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.60, y=7.43, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 148: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.65, y=7.46, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 149: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.71, y=7.49, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 150: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.76, y=7.52, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 151: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.81, y=7.55, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 152: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.87, y=7.57, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 153: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.92, y=7.60, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 154: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=5.97, y=7.63, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 155: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.03, y=7.66, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 156: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.08, y=7.68, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 157: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.13, y=7.71, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 158: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.18, y=7.74, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 159: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.24, y=7.77, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 160: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.29, y=7.79, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 161: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.34, y=7.82, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 162: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.40, y=7.85, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 163: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.45, y=7.88, theta=0.48, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 164: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=6.48, y=7.89, theta=0.40, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=1
+Step 165: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=6.51, y=7.90, theta=0.32, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=0
+Step 166: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=6.53, y=7.91, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 167: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.59, y=7.93, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 168: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.65, y=7.94, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 169: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.71, y=7.96, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 170: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.77, y=7.97, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 171: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.82, y=7.98, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 172: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.88, y=8.00, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 173: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=6.94, y=8.01, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 174: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.00, y=8.03, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 175: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.06, y=8.04, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 176: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.12, y=8.06, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 177: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.17, y=8.07, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 178: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.23, y=8.08, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 179: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.29, y=8.10, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 180: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.35, y=8.11, theta=0.24, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_}
+Step 181: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.False_, 'goal_on_left': np.False_, 'goal_on_right': np.True_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=7.38, y=8.12, theta=0.16, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=1
+Step 182: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=7.41, y=8.12, theta=0.08, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+TURN LOCK ACTIVE -> action=RIGHT, remaining=0
+Step 183: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=RIGHT velocity=[ 0.3 -0.8]
+DEBUG build_state -> x=7.44, y=8.13, theta=0.00, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 184: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.50, y=8.13, theta=0.00, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 185: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.56, y=8.13, theta=0.00, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 186: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+DEBUG build_state -> x=7.62, y=8.13, theta=0.00, state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_}
+Step 187: state={'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': np.True_, 'goal_on_left': np.False_, 'goal_on_right': np.False_} action=FORWARD velocity=[0.6 0. ]
+Goal reached.
+[32m2026-10-10 21:03[0m | [1mINFO    [0m | [1mSimulation Environment 'world_hard' ended. Total time 18.70 seconds.[0m
+Simulation finished. Keeping window open...
+
+IR-SIM report:
+{'reached_goal': True, 'collision_or_done': False, 'steps_taken': 187, 'max_steps_allowed': 300, 'efficient_step_limit': 200, 'efficiency_status': 'efficient', 'efficiency_passed': True, 'final_pose': [7.67814415627635, 8.127051090332003, 0.0], 'history_length': 187}

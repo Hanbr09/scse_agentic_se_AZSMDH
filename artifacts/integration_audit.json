@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "rounds": 2,
+  "model_exchanges": 12,
+  "generated_tests_per_round": 64,
+  "logical_states_per_round": 64,
+  "worlds_per_round": 4,
+  "mean_steps": 169.5,
+  "previous_unittest_methods": 76,
+  "offline_integration_cases": 73,
+  "teacher_files_unchanged": 6,
+  "previous_python_files_unchanged": 24,
+  "private_service_port_closed": true,
+  "new_files_secret_scan": "passed",
+  "new_file_count": 889,
+  "new_bytes": 11324484
+}

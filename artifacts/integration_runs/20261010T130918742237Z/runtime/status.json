@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "backend": "vulkan",
+  "port": 11522,
+  "hardware_before": {
+    "ram_gib": 5.869899749755859,
+    "gpu_c": 58.0,
+    "vram_mib": 5826.0
+  },
+  "returncode": 1,
+  "cleanup": {
+    "worker_stopped": true,
+    "server_stopped": true
+  },
+  "elapsed_seconds": 84.10899999999674
+}

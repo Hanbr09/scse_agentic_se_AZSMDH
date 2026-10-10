@@ -1,0 +1,956 @@
+FFFFFFF.FFFFFFF.FFFFFFF.FFFFFFF.FFFFFFF.FFFFFFF.FFFFFFF.FFFFFFF.         [100%]
+================================== FAILURES ===================================
+_______________________ test_navigation[state0-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state1-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state2-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state3-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state4-LEFT] _________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state5-LEFT] _________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state6-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state8-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state9-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state10-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state11-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state12-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state13-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state14-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state16-LEFT] ________________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state17-LEFT] ________________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state18-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state19-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state20-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state21-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state22-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state24-RIGHT] ________________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state25-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state26-RIGHT] ________________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state27-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state28-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state29-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state30-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state32-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state33-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state34-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state35-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state36-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state37-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state38-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state40-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state41-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state42-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state43-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state44-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state45-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state46-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state48-LEFT] ________________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state49-LEFT] ________________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state50-RIGHT] ________________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state51-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state52-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state53-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': False, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state54-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': False, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state56-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state57-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state58-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+______________________ test_navigation[state59-FORWARD] _______________________
+
+state = {'front_blocked': False, 'left_blocked': True, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'FORWARD'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'FORWARD'
+E         
+E         - FORWARD
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state60-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+________________________ test_navigation[state61-LEFT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': False, 'right_blocked': True, 'goal_ahead': True, ...}
+expected = 'LEFT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'LEFT'
+E         
+E         - LEFT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+_______________________ test_navigation[state62-RIGHT] ________________________
+
+state = {'front_blocked': True, 'left_blocked': True, 'right_blocked': False, 'goal_ahead': True, ...}
+expected = 'RIGHT'
+
+    @pytest.mark.parametrize("state, expected", scenario_cases())
+    def test_navigation(state, expected):
+        before = state.copy()
+        result = decide_next_move(state)
+>       assert result == expected
+E       AssertionError: assert 'STOP' == 'RIGHT'
+E         
+E         - RIGHT
+E         + STOP
+
+test_navigation.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED test_navigation.py::test_navigation[state0-FORWARD] - AssertionError: ...
+FAILED test_navigation.py::test_navigation[state1-FORWARD] - AssertionError: ...
+FAILED test_navigation.py::test_navigation[state2-FORWARD] - AssertionError: ...
+FAILED test_navigation.py::test_navigation[state3-FORWARD] - AssertionError: ...
+FAILED test_navigation.py::test_navigation[state4-LEFT] - AssertionError: ass...
+FAILED test_navigation.py::test_navigation[state5-LEFT] - AssertionError: ass...
+FAILED test_navigation.py::test_navigation[state6-RIGHT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state8-FORWARD] - AssertionError: ...
+FAILED test_navigation.py::test_navigation[state9-FORWARD] - AssertionError: ...
+FAILED test_navigation.py::test_navigation[state10-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state11-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state12-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state13-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state14-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state16-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state17-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state18-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state19-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state20-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state21-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state22-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state24-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state25-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state26-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state27-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state28-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state29-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state30-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state32-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state33-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state34-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state35-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state36-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state37-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state38-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state40-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state41-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state42-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state43-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state44-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state45-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state46-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state48-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state49-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state50-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state51-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state52-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state53-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state54-RIGHT] - AssertionError: a...
+FAILED test_navigation.py::test_navigation[state56-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state57-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state58-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state59-FORWARD] - AssertionError:...
+FAILED test_navigation.py::test_navigation[state60-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state61-LEFT] - AssertionError: as...
+FAILED test_navigation.py::test_navigation[state62-RIGHT] - AssertionError: a...
+56 failed, 8 passed in 0.47s

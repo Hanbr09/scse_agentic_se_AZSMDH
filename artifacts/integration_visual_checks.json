@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "animations": [
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_0/worlds/world_custom/simulation.gif",
+      "frames": 32,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    },
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_0/worlds/world_easy/simulation.gif",
+      "frames": 25,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    },
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_0/worlds/world_hard/simulation.gif",
+      "frames": 31,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    },
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_0/worlds/world_medium/simulation.gif",
+      "frames": 24,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    },
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_1/worlds/world_custom/simulation.gif",
+      "frames": 32,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    },
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_1/worlds/world_easy/simulation.gif",
+      "frames": 25,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    },
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_1/worlds/world_hard/simulation.gif",
+      "frames": 31,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    },
+    {
+      "path": "artifacts/integration_runs/20261010T131220778018Z/round_1/worlds/world_medium/simulation.gif",
+      "frames": 24,
+      "size": [
+        600,
+        480
+      ],
+      "moving": true,
+      "nonblank": true
+    }
+  ]
+}
