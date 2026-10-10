@@ -1,8 +1,0 @@
-{
-  "started_at": "2026-10-10T12:52:01.681147+00:00",
-  "status": "error",
-  "model": "qwen2.5:3b",
-  "rounds": [],
-  "error": "ValueError: Tests may contain only imports, parametrization, assignments and assertions.",
-  "finished_at": "2026-10-10T12:52:17.587339+00:00"
-}

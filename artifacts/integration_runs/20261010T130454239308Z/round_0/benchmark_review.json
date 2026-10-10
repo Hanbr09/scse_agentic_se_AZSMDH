@@ -1,9 +1,0 @@
-{
-  "issue": "No measured issue in the four supplied worlds.",
-  "likely_cause": "The current policy completed the supplied routes within the limits.",
-  "recommendation": "Retain the policy and rerun the full suite after any revision.",
-  "safety_passed": true,
-  "goal_completion_passed": true,
-  "efficiency_passed": true,
-  "needs_revision": false
-}

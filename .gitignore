@@ -3,3 +3,8 @@ __pycache__/
 *.py[cod]
 *.tmp
 .DS_Store
+.pytest_cache/
+artifacts/integration_runs/*
+!artifacts/integration_runs/20261010T131220778018Z/
+artifacts/integration_baseline/
+artifacts/local_benchmarks/
