@@ -15,6 +15,7 @@ import psutil
 
 from artifact_io import write_json
 from integration_model import hardware_sample
+from main import publish_result
 
 
 ROOT = Path(__file__).resolve().parent
@@ -103,7 +104,7 @@ def main():
             if "qwen2.5:3b" not in {model["name"] for model in models}:
                 raise RuntimeError("qwen2.5:3b is not installed. No model was downloaded.")
             command = [sys.executable, "-B", "-u", str(ROOT / "main.py"), "--allow-model",
-                       "--base-url", url, "--output", str(output)]
+                       "--base-url", url, "--output", str(output), "--defer-publication"]
             worker = subprocess.Popen(command, cwd=ROOT, env=environment, stdout=worker_log,
                                       stderr=subprocess.STDOUT, creationflags=flags)
             print(f"Running pipeline; records: {output}", flush=True)
@@ -134,9 +135,15 @@ def main():
         terminate_owned(server)
         result["cleanup"] = {"worker_stopped": worker is None or worker.poll() is not None,
                              "server_stopped": server is None or server.poll() is not None}
+        with socket.socket() as probe:
+            result["cleanup"]["port_closed"] = probe.connect_ex(("127.0.0.1", args.port)) != 0
         result["elapsed_seconds"] = time.monotonic() - started
         write_json(runtime / "status.json", result)
         print(f"Temporary processes stopped. Records: {output}", flush=True)
+        if result["status"] == "finished" and result.get("returncode") == 0:
+            if not all(result["cleanup"].values()):
+                raise RuntimeError("Cleanup was incomplete; accepted results were not replaced.")
+            publish_result(output)
 
 
 if __name__ == "__main__":

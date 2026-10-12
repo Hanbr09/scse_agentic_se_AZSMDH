@@ -6,12 +6,11 @@ import hashlib
 import json
 import logging
 from pathlib import Path
-import shutil
 import subprocess
 import sys
 
 from analyst_agent import run_analyst
-from artifact_io import write_json, write_text
+from artifact_io import read_json, write_json, write_text
 from benchmark_irsim import run_benchmark
 from developer_agent import run_developer, run_developer_revision
 from integration_model import LocalModel
@@ -23,6 +22,35 @@ from test_agent import execute_tests, run_test_agent
 
 
 ROOT = Path(__file__).resolve().parent
+REPORT_FILES = ("simulation_report.json", "irsim_benchmark_report.json",
+                "simulation_review.json", "benchmark_review.json", "test_report.json")
+
+
+def publish_result(output):
+    """Publish only after the caller has completed model/service cleanup."""
+    output = Path(output).resolve()
+    summary = read_json(output / "run.json")
+    if summary["status"] != "passed" or summary.get("revision_changed_source") is not True:
+        raise ValueError("Only a passed, changed revision can be published.")
+    files = {ROOT / "generated/navigation_logic_revised.py":
+             (output / "round_1/navigation_logic.py").read_text(encoding="utf-8")}
+    for name in REPORT_FILES:
+        value = read_json(output / "round_1" / name)
+        files[ROOT / "artifacts" / name] = json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n"
+    pointer = ROOT / "artifacts/integration_latest.json"
+    before = {path: path.read_bytes() if path.exists() else None for path in (*files, pointer)}
+    try:
+        for path, value in files.items():
+            write_text(path, value)
+        write_json(pointer, {"run_directory": output.relative_to(ROOT).as_posix()
+                             if output.is_relative_to(ROOT) else str(output), **summary})
+    except BaseException:
+        for path, contents in before.items():
+            if contents is None:
+                path.unlink(missing_ok=True)
+            else:
+                write_text(path, contents.decode("utf-8"))
+        raise
 
 
 def make_logger(output):
@@ -145,14 +173,9 @@ def run_pipeline(output, model):
         if not summary["revision_changed_source"]:
             summary["status"] = "needs_revision"
             summary["note"] = "The revision was identical; no revised source was demonstrated."
-        if summary["status"] == "passed":
-            write_text(ROOT / "generated/navigation_logic_revised.py", previous["code"])
-            for filename in ("simulation_report.json", "irsim_benchmark_report.json",
-                             "simulation_review.json", "benchmark_review.json", "test_report.json"):
-                shutil.copyfile(output / "round_1" / filename, ROOT / "artifacts" / filename)
-        logger.info("Pipeline finished: %s", summary["status"])
+        logger.info("Pipeline finished: %s; publication waits for cleanup", summary["status"])
         return summary
-    except Exception as error:
+    except BaseException as error:
         summary["status"] = "error"
         summary["error"] = f"{type(error).__name__}: {error}"
         logger.exception("Pipeline stopped; rejected outputs remain in the run folder.")
@@ -160,7 +183,7 @@ def run_pipeline(output, model):
     finally:
         summary["finished_at"] = datetime.now(timezone.utc).isoformat()
         write_json(output / "run.json", summary)
-        write_json(ROOT / "artifacts/integration_latest.json",
+        write_json(ROOT / "artifacts/integration_last_attempt.json",
                    {"run_directory": output.relative_to(ROOT).as_posix()
                     if output.is_relative_to(ROOT) else str(output), **summary})
         for handler in list(logger.handlers):
@@ -175,6 +198,8 @@ def main():
     parser.add_argument("--model", default="qwen2.5:3b")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--cpu", action="store_true")
+    parser.add_argument("--defer-publication", action="store_true",
+                        help="The managed wrapper publishes after stopping its private service.")
     parser.add_argument("--no-hardware-guard", action="store_true",
                         help="For externally managed non-NVIDIA hosts only.")
     args = parser.parse_args()
@@ -186,10 +211,12 @@ def main():
                        guard=not args.no_hardware_guard)
     try:
         result = run_pipeline(output, model)
-        print(json.dumps(result, indent=2))
-        return 0 if result["status"] == "passed" else 2
     finally:
         model.close()
+    if result["status"] == "passed" and not args.defer_publication:
+        publish_result(output)
+    print(json.dumps(result, indent=2))
+    return 0 if result["status"] == "passed" else 2
 
 
 if __name__ == "__main__":

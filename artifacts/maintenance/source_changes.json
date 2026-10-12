@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-13",
+  "run_directory": "artifacts/integration_runs/20261010T131220778018Z",
+  "meaning": "Recorded snapshots and model outputs are unchanged. These maintenance fixes were made after that run and verified separately.",
+  "files": {
+    "main.py": {
+      "before": "32b3b8669a348a63c9d6c6973752adf757a2c496edd5faece9ce677288c789d3",
+      "after": "503c5282288bd45ab2ae02afda91e8964452eca3f7e8122720c58cb7680d435f"
+    },
+    "run_integration.py": {
+      "before": "574fa677f7ae35ab7b1a448efe5ee81ec64012193325af36cdf485cd2c115fe2",
+      "after": "6bb8018df6cbfee836b7ba9e69a3eff0189e1ecf5a297d69a4aca899ea78d329"
+    },
+    "verify_integration.py": {
+      "before": "76f3e0e1fd2cb8ef03b54c8dfbefc92336db27fc0d97f022fd550b4f6b7e4012",
+      "after": "95f2046b0a1799ead7313b18bc8ca705277d3ea394138eb512352f368880536d"
+    },
+    "irsim_capture.py": {
+      "before": "6adfa14c8a8cdb3cf828cab1f2ceefddfdf05cc7b16e4c7d9692df665c224910",
+      "after": "12edbbd9eddd2f8bcd38f1f4e811c770e5b0b6d1609af837fefae388cf0d8e86"
+    }
+  }
+}

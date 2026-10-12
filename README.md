@@ -32,8 +32,12 @@ Then check the saved evidence and run the offline tests:
 
 The integration audit checks the saved model exchanges, their inputs, source
 snapshots, generated tests and simulation reports. It does not call a model
-or repeat the four routes. The two test commands cover 73 integration checks
+or repeat the four routes. The two test commands now cover 101 integration checks
 and 76 earlier unittest methods.
+
+The [13 October maintenance notes](docs/maintenance-20261013.txt) describe
+publication-failure protection and simulator boundary fixes. The original
+run evidence is unchanged; the audit explicitly identifies later source changes.
 
 ## Explore the result
 

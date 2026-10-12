@@ -19,6 +19,12 @@ opening this repository.
 | [benchmark_review.json](benchmark_review.json) | Benchmark review and measured flags |
 | [integration_visual_checks.json](integration_visual_checks.json) | Recorded visual checks |
 
+Later implementation fixes are listed separately in
+[maintenance/source_changes.json](maintenance/source_changes.json).
+The historical run and its snapshots remain unchanged. New execution attempts
+write `integration_last_attempt.json`; only an accepted publication replaces
+`integration_latest.json`. See the [maintenance notes](../docs/maintenance-20261013.txt).
+
 ## The complete run
 
 Start with the [trace](integration_runs/20261010T131220778018Z/trace.log) for

@@ -1,0 +1,27 @@
+{
+  "kind": "Post-fix offline simulation, not a new model run",
+  "revised": {
+    "total_worlds": 4,
+    "goals_reached": 4,
+    "success_rate": 1,
+    "efficient_worlds": 4,
+    "inefficient_success_worlds": 0,
+    "failed_worlds": 0,
+    "efficiency_rate": 1,
+    "average_steps_taken": 169.5
+  },
+  "steps": [
+    150,
+    148,
+    187,
+    193
+  ],
+  "stop_control": {
+    "purpose": "Deliberately wrong STOP policy tests the observer",
+    "action_count": 1,
+    "physical_steps": 0,
+    "static_gif": true,
+    "goal_reached": false,
+    "evidence_check_passed": true
+  }
+}

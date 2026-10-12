@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import re
 import xml.etree.ElementTree as ET
 
 from analyst_agent import validate_requirements
@@ -33,6 +34,46 @@ def text_hash(path):
 
 def code_hash(code):
     return hashlib.sha256(code.encode("utf-8")).hexdigest()
+
+
+def verify_sources(output):
+    hashes = read_json(output / "source_hashes.json")
+    changed = {}
+    for name, expected in hashes.items():
+        require(text_hash(output / ("source_" + name)) == expected,
+                f"Recorded source snapshot changed: {name}")
+        current = text_hash(ROOT / name)
+        if current != expected:
+            changed[name] = {"before": expected, "after": current}
+    if changed:
+        amendment = read_json(ROOT / "artifacts/maintenance/source_changes.json")
+        require(output == (ROOT / amendment["run_directory"]).resolve(),
+                "Source amendment belongs to a different recorded run")
+        require(set(changed) <= {"main.py", "run_integration.py", "verify_integration.py", "irsim_capture.py"},
+                "An unapproved execution source changed")
+        require(amendment["files"] == changed,
+                "Current source does not match the explicit maintenance record")
+    return sorted(changed)
+
+
+def verify_trajectory(trace, report, console):
+    actions = re.findall(r"^Step (\d+): .* action=(FORWARD|LEFT|RIGHT|STOP) velocity=", console, re.MULTILINE)
+    steps = report["steps_taken"]
+    require([int(number) for number, _ in actions] == list(range(1, steps + 1)),
+            "Console does not contain the recorded action sequence")
+    stopped = actions[-1][1] == "STOP"
+    require(all(action != "STOP" for _, action in actions[:-1]), "Actions continue after STOP")
+    require(("Agent returned STOP." in console) == stopped, "STOP termination differs from console")
+    physical_steps = steps - int(stopped)
+    require(trace.get("physical_steps", physical_steps) == physical_steps,
+            "Physical step count differs from action sequence")
+    require(len(trace["poses"]) == physical_steps + 1
+            and trace["poses"][-1] == report["final_pose"], "Trajectory differs from report")
+    require(trace["collision_before_cleanup"] == report["collision_before_cleanup"]
+            and trace["done_before_cleanup"] == report["done_before_cleanup"], "Cleanup capture differs")
+    pose, goal = trace["poses"][-1], trace["goal"]
+    distance = math.hypot(pose[0] - goal[0], pose[1] - goal[1])
+    require(report["reached_goal"] == (distance <= 0.4), "Goal flag differs from measured distance")
 
 
 def exchange(folder, stage, expected_input):
@@ -103,12 +144,7 @@ def verify_worlds(folder, code, benchmark):
         require(text_hash(directory / "work/generated/navigation_logic.py") == code_hash(code),
                 "Simulation workspace navigation differs")
         trace = read_json(directory / "trajectory.json")
-        require(len(trace["poses"]) == report["steps_taken"] + 1
-                and trace["poses"][-1] == report["final_pose"], "Trajectory differs from report")
-        require(trace["collision_before_cleanup"] == report["collision_before_cleanup"]
-                and trace["done_before_cleanup"] == report["done_before_cleanup"], "Cleanup capture differs")
-        distance = math.dist(trace["poses"][-1][:2], trace["goal"][:2])
-        require(report["reached_goal"] == (distance < 0.4), "Goal flag differs from measured distance")
+        verify_trajectory(trace, report, (directory / "process.log").read_text(encoding="utf-8"))
         require((directory / "trajectory.png").stat().st_size > 1000
                 and (directory / "simulation.gif").stat().st_size > 1000, "Visual evidence missing")
         results.append(report)
@@ -124,9 +160,7 @@ def verify(output):
         require(text_hash(ROOT / relative) == expected, f"Teacher file changed: {relative}")
     for relative, expected in provenance["previous_source_files"].items():
         require(text_hash(ROOT / relative) == expected, f"Previous source changed: {relative}")
-    for name, digest in read_json(output / "source_hashes.json").items():
-        require(text_hash(ROOT / name) == digest and text_hash(output / ("source_" + name)) == digest,
-                f"Source has changed since this run: {name}")
+    source_changes = verify_sources(output)
     brief = (output / "brief.txt").read_text(encoding="utf-8")
     require(brief == (ROOT / "brief.txt").read_text(encoding="utf-8-sig"), "Brief changed")
     previous = None
@@ -199,7 +233,8 @@ def verify(output):
                 f"Latest report differs: {filename}")
     return {"status": "passed", "rounds": 2, "model_exchanges": 12,
             "generated_tests_per_round": 64, "logical_states_per_round": 64,
-            "worlds_per_round": 4, "mean_steps": rounds[-1]["average_steps"]}
+            "worlds_per_round": 4, "mean_steps": rounds[-1]["average_steps"],
+            "post_run_source_changes": source_changes}
 
 
 def main():

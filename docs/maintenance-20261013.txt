@@ -1,0 +1,41 @@
+Maintenance check - 13 October 2026
+
+The accepted integration run from 10 October remains unchanged. Its raw
+model replies, navigation outputs, maps, reports and source snapshots have
+not been rewritten. The navigation policy has not changed.
+
+The current implementation separates execution from publication.
+main.run_pipeline records an attempt; publication follows successful model
+cleanup. The managed entrypoint also waits for its private service to stop
+and its port to close. A failed attempt updates integration_last_attempt.json,
+not integration_latest.json. Publication reads every candidate file before
+replacing anything, publishes the accepted pointer last, and restores prior
+files if a replacement raises an exception. This handles ordinary exceptions;
+it is not a claim of crash-proof multi-file database transactions.
+
+The evidence checker now uses the teacher's <= 0.4 goal tolerance. It reads
+the actual action sequence from the teacher console: a final STOP is an
+action but does not advance the simulator. This determines the required
+number of measured positions. The observer also saves a valid static GIF
+when execution stops before its first physical step.
+
+The previous source hashes are still checked against the original snapshots.
+artifacts/maintenance/source_changes.json separately identifies the exact
+before/after hashes of the four maintenance changes. The checker does not
+silently ignore arbitrary source drift, and its output explicitly lists
+post_run_source_changes. This is a later maintenance check, not a new claim
+that the October 10 model run used today's code.
+
+Verification:
+- 76 existing unittest methods passed.
+- 101 integration tests passed, including 28 new maintenance cases.
+- The accepted historical integration evidence still passed its checks.
+- The revised policy was rerun in all four unchanged supplied worlds:
+  150, 148, 187 and 193 steps, four goals reached, average 169.5.
+- An explicitly incorrect STOP-only control was run separately to test the
+  observer: one action, zero physical steps, one recorded pose and a static
+  GIF. It correctly failed to reach the goal. It is not an accepted policy.
+
+The new simulation output stays under the ignored local_benchmarks directory.
+No full model pipeline was rerun for these implementation fixes. The saved
+evidence remains associated with the source version that actually produced it.

@@ -30,6 +30,14 @@ def main():
         original_step, original_end, original_render = env.step, env.end, env.render
         frames = []
 
+        def capture_frame(figure):
+            from PIL import Image
+            figure.canvas.draw()
+            frame = Image.frombuffer("RGBA", figure.canvas.get_width_height(),
+                                     figure.canvas.buffer_rgba(), "raw", "RGBA", 0, 1).convert("RGB")
+            frame.thumbnail((600, 600))
+            frames.append(frame)
+
         def observed_step(*step_args, **step_keywords):
             result = original_step(*step_args, **step_keywords)
             poses.append([float(value) for value in robot.state[:, 0]])
@@ -38,19 +46,14 @@ def main():
         def observed_render(*render_args, **render_keywords):
             result = original_render(*render_args, **render_keywords)
             if len(poses) % 6 == 0:
-                from PIL import Image
-                figure = plt.gcf()
-                figure.canvas.draw()
-                frame = Image.frombuffer("RGBA", figure.canvas.get_width_height(),
-                                         figure.canvas.buffer_rgba(), "raw", "RGBA", 0, 1).convert("RGB")
-                frame.thumbnail((600, 600))
-                frames.append(frame)
+                capture_frame(plt.gcf())
             return result
 
         def observed_end(*end_args, **end_keywords):
             # Only record measurements: actions, obstacles and physics are unchanged.
             before_cleanup = {
                 "poses": poses, "done_before_cleanup": bool(env.done()),
+                "physical_steps": len(poses) - 1,
                 "collision_before_cleanup": bool(robot.collision),
                 "goal": [float(value) for value in robot.goal[:, 0]],
                 "world": args.world.name,
@@ -64,9 +67,10 @@ def main():
             axis.set_title(args.world.stem.replace("_", " ").title())
             axis.legend(loc="upper left")
             figure.savefig(args.capture / "trajectory.png", dpi=130)
-            if frames:
-                frames[0].save(args.capture / "simulation.gif", save_all=True,
-                               append_images=frames[1:], duration=100, loop=0)
+            # A STOP before the first step still has a valid, static visual record.
+            capture_frame(figure)
+            frames[0].save(args.capture / "simulation.gif", save_all=True,
+                           append_images=frames[1:], duration=100, loop=0)
             return original_end(*end_args, **end_keywords)
 
         env.step, env.end, env.render = observed_step, observed_end, observed_render
